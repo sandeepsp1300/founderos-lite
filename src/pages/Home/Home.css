@@ -92,8 +92,8 @@
   background:
     linear-gradient(
       135deg,
-      #0f172a,
-      #1e293b,
+      #4068c5,
+      #4fbccf,
       #2563eb
     );
 
@@ -355,7 +355,7 @@
 
   box-shadow:
     0 10px 25px
-    rgba(0,0,0,.08);
+    rgba(204, 29, 29, 0.08);
 }
 
 .price-card h1 {

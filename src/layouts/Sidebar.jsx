@@ -133,7 +133,7 @@ function Sidebar() {
         }
 
         navigate(
-          "/login"
+          "/"
         );
 
       }
@@ -232,6 +232,11 @@ function Sidebar() {
           label: "Billing",
           path: "/billing",
         },
+        {
+          icon: "💎",
+          label: "Subscription",
+          path: "/subscription",
+        },
       ],
     },
 
@@ -280,8 +285,8 @@ function Sidebar() {
 
       <div
         className={`sidebar-content ${mobileMenuOpen
-            ? "show"
-            : ""
+          ? "show"
+          : ""
           }`}
       >
 

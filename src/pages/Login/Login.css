@@ -23,8 +23,8 @@
   flex: 1;
   background: linear-gradient(
     135deg,
-    #09295c,
-    #0e277a
+    #2bd1ee,
+    #3946f3
   );
 
   color: white;
@@ -268,7 +268,7 @@
 }
 
 .login-btn:hover {
-  background: #163e7e;
+  background: #245cb8;
 }
 
 .login-btn:disabled {

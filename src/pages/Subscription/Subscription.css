@@ -1,0 +1,256 @@
+/* =========================
+PAGE
+========================= */
+
+.subscription-page {
+padding: 40px;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.subscription-header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.subscription-header h1 {
+font-size: 48px;
+font-weight: 800;
+color: #111827;
+margin-bottom: 10px;
+}
+
+.subscription-header p {
+color: #6b7280;
+font-size: 16px;
+}
+
+/* =========================
+CURRENT PLAN
+========================= */
+
+.current-plan {
+background: linear-gradient(
+135deg,
+#2563eb,
+#7c3aed
+);
+
+color: white;
+
+border-radius: 24px;
+
+padding: 30px;
+
+margin-bottom: 40px;
+
+text-align: center;
+
+box-shadow:
+0 15px 35px
+rgba(37, 99, 235, 0.25);
+}
+
+.current-plan span {
+display: block;
+font-size: 13px;
+opacity: 0.8;
+margin-bottom: 8px;
+}
+
+.current-plan h2 {
+font-size: 32px;
+margin-bottom: 5px;
+}
+
+.current-plan p {
+font-size: 14px;
+opacity: 0.9;
+}
+
+/* =========================
+GRID
+========================= */
+
+.plans-grid {
+display: grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(320px, 1fr)
+);
+
+gap: 25px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.plan-card {
+position: relative;
+
+background: white;
+
+border: 1px solid #e5e7eb;
+
+border-radius: 24px;
+
+padding: 30px;
+
+transition: 0.3s;
+
+box-shadow:
+0 10px 30px
+rgba(0, 0, 0, 0.05);
+}
+
+.plan-card:hover {
+transform: translateY(-8px);
+
+box-shadow:
+0 20px 40px
+rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+POPULAR
+========================= */
+
+.popular-plan {
+border: 2px solid #4f46e5;
+transform: scale(1.03);
+}
+
+.popular-badge {
+position: absolute;
+
+top: -12px;
+right: 20px;
+
+background: #4f46e5;
+
+color: white;
+
+padding: 8px 14px;
+
+border-radius: 999px;
+
+font-size: 11px;
+
+font-weight: 700;
+}
+
+/* =========================
+PRICE
+========================= */
+
+.plan-card h2 {
+font-size: 28px;
+margin-bottom: 15px;
+color: #111827;
+}
+
+.price {
+font-size: 56px;
+font-weight: 800;
+color: #2563eb;
+margin-bottom: 10px;
+}
+
+.duration {
+color: #6b7280;
+margin-bottom: 25px;
+font-size: 14px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+.plan-btn {
+width: 100%;
+
+border: none;
+
+border-radius: 14px;
+
+padding: 15px;
+
+cursor: pointer;
+
+font-size: 15px;
+
+font-weight: 700;
+
+color: white;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#7c3aed
+);
+
+transition: 0.3s;
+}
+
+.plan-btn:hover {
+transform: translateY(-2px);
+
+box-shadow:
+0 10px 25px
+rgba(37, 99, 235, 0.25);
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.feature-list {
+margin-top: 25px;
+}
+
+.feature {
+padding: 12px 0;
+
+border-bottom:
+1px solid #f3f4f6;
+
+color: #374151;
+
+font-size: 14px;
+}
+
+.feature:last-child {
+border-bottom: none;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+.subscription-page {
+padding: 20px;
+}
+
+.subscription-header h1 {
+font-size: 32px;
+}
+
+.plans-grid {
+grid-template-columns: 1fr;
+}
+
+.price {
+font-size: 44px;
+}
+
+.current-plan h2 {
+font-size: 24px;
+}
+
+}

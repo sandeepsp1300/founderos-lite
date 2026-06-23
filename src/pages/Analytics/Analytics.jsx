@@ -5,7 +5,7 @@ import { getInvestors } from "../../services/investorService";
 import { getMeetings } from "../../services/meetingService";
 import { getTasks } from "../../services/taskService";
 import { getDocuments } from "../../services/documentService";
-import { getFollowUps } from "../../services/followUpService";
+import { getFollowUps } from "../../services/followupService";
 import { getTeamMembers } from "../../services/teamService";
 
 

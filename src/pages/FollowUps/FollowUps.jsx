@@ -6,7 +6,7 @@ import {
   createFollowUp,
   updateFollowUp,
   deleteFollowUp,
-} from "../../services/followUpService";
+} from "../../services/followupService";
 
 import {
   getInvestors,

@@ -8,7 +8,12 @@
 
   min-height: 100vh;
 
-  background: #f8fafc;
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      #eef2ff 100%
+    );
 
 }
 
@@ -20,11 +25,35 @@
 
   flex: 1;
 
-  padding: 24px;
+  padding: 30px;
 
   overflow-x: auto;
 
   overflow-y: auto;
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.dashboard-main::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+.dashboard-main::-webkit-scrollbar-thumb {
+
+  background: #cbd5e1;
+
+  border-radius: 20px;
+
+}
+
+.dashboard-main::-webkit-scrollbar-thumb:hover {
+
+  background: #94a3b8;
 
 }
 
@@ -36,7 +65,7 @@
 
   .dashboard-main {
 
-    padding: 20px;
+    padding: 24px;
 
   }
 
@@ -58,7 +87,7 @@
 
     width: 100%;
 
-    padding: 15px;
+    padding: 18px;
 
   }
 
@@ -72,7 +101,7 @@
 
   .dashboard-main {
 
-    padding: 12px;
+    padding: 14px;
 
   }
 

@@ -37,6 +37,7 @@ import About from "../pages/About/About";
 
 import Contact from "../pages/Contact/Contact";
 
+import Subscription from "../pages/Subscription/Subscription";
 
 function AppRoutes() {
   return (<BrowserRouter> <Routes>
@@ -71,8 +72,7 @@ function AppRoutes() {
       element={<ResetPassword />}
     />
 
-
-
+    
     {/* HOME AFTER LOGIN */}
 
     <Route
@@ -193,6 +193,20 @@ function AppRoutes() {
         </DashboardLayout>
       }
     />
+
+{/* SUBSCRIPTION */}
+
+    <Route
+      path="/subscription"
+      element={
+        <DashboardLayout>
+          <Subscription />
+        </DashboardLayout>
+      }
+    />
+
+
+
 
     {/* SETTINGS */}
 
