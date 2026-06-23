@@ -317,55 +317,317 @@
     rgba(0,0,0,.08);
 }
 
-/* =========================
-   PRICING
-========================= */
+
+/* ==========================================
+   PRICING SECTION
+========================================== */
 
 .pricing-section {
-  padding: 100px 80px;
 
-  background: #f8fafc;
+  padding: 100px 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc,
+      #ffffff
+    );
+
 }
 
-.pricing-section h2 {
+.section-header {
+
   text-align: center;
-  margin-bottom: 50px;
+
+  margin-bottom: 60px;
+
 }
+
+.section-header span {
+
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+}
+
+.section-header h2 {
+
+  margin-top: 18px;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  color: #111827;
+
+}
+
+.section-header p {
+
+  margin-top: 12px;
+
+  font-size: 18px;
+
+  color: #6b7280;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
 
 .pricing-grid {
+
+  max-width: 1200px;
+
+  margin: auto;
+
   display: grid;
 
   grid-template-columns:
     repeat(
       auto-fit,
-      minmax(300px,1fr)
+      minmax(320px,1fr)
     );
 
   gap: 30px;
+
 }
 
+/* ==========================================
+   CARD
+========================================== */
+
 .price-card {
+
+  position: relative;
+
   background: white;
 
-  padding: 40px;
+  padding: 35px;
 
-  border-radius: 20px;
+  border-radius: 28px;
 
-  text-align: center;
+  border:
+    1px solid #e5e7eb;
 
   box-shadow:
-    0 10px 25px
-    rgba(204, 29, 29, 0.08);
+    0 10px 30px
+    rgba(
+      15,
+      23,
+      42,
+      .06
+    );
+
+  transition:
+    all .3s ease;
+
+}
+
+.price-card:hover {
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 25px 50px
+    rgba(
+      15,
+      23,
+      42,
+      .10
+    );
+
+}
+
+.price-card h3 {
+
+  color: #111827;
+
+  font-size: 24px;
+
+  margin-bottom: 12px;
+
 }
 
 .price-card h1 {
-  font-size: 60px;
+
+  font-size: 56px;
+
+  font-weight: 800;
+
   color: #2563eb;
+
+  margin-bottom: 8px;
+
 }
 
-.featured {
-  border: 3px solid #2563eb;
+.price-card p {
+
+  color: #6b7280;
+
+  margin-bottom: 25px;
+
 }
+
+/* ==========================================
+   FEATURED PLAN
+========================================== */
+
+.featured {
+
+  border:
+    2px solid #4f46e5;
+
+  transform:
+    scale(1.03);
+
+}
+
+.featured:hover {
+
+  transform:
+    scale(1.03)
+    translateY(-8px);
+
+}
+
+.popular-tag {
+
+  position: absolute;
+
+  top: -14px;
+
+  right: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  color: white;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.price-card ul {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 25px 0;
+
+}
+
+.price-card li {
+
+  padding: 10px 0;
+
+  color: #374151;
+
+  border-bottom:
+    1px solid #f1f5f9;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.price-btn {
+
+  width: 100%;
+
+  border: none;
+
+  cursor: pointer;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  transition:
+    all .3s ease;
+
+}
+
+.price-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(
+      79,
+      70,
+      229,
+      .35
+    );
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .section-header h2 {
+
+    font-size: 36px;
+
+  }
+
+  .price-card h1 {
+
+    font-size: 42px;
+
+  }
+
+}
+
 
 /* =========================
    CONTACT

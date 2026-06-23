@@ -1,8 +1,81 @@
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
+
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG } from "../../services/emailjs";
+
+
 function Home() {
 
+
+
+  const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  subject: "",
+  message: ""
+});
+
+const [sending, setSending] = useState(false);
+
+const handleChange = (e) => {
+
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+
+};
+
+const handleSubmit = async (e) => {
+
+  e.preventDefault();
+
+  setSending(true);
+
+  try {
+
+    await emailjs.send(
+
+      EMAILJS_CONFIG.SERVICE_ID,
+
+      EMAILJS_CONFIG.TEMPLATE_ID,
+
+      {
+        user_name: formData.name,
+        user_email: formData.email,
+        title: formData.subject,
+        message: formData.message
+      },
+
+      EMAILJS_CONFIG.PUBLIC_KEY
+
+    );
+
+    alert("Message Sent Successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Failed To Send Message");
+
+  } finally {
+
+    setSending(false);
+
+  }
+
+};
   const navigate = useNavigate();
 
   const features = [
@@ -282,28 +355,135 @@ function Home() {
         className="pricing-section"
       >
 
-        <h2>
-          Pricing Plans
-        </h2>
+        <div className="section-header">
+
+          <span>
+            PRICING
+          </span>
+
+          <h2>
+            Simple Pricing For Every Startup
+          </h2>
+
+          <p>
+            Start free and upgrade as your business grows.
+          </p>
+
+        </div>
 
         <div className="pricing-grid">
 
+          {/* FREE TRIAL */}
+
           <div className="price-card">
-            <h3>Starter</h3>
-            <h1>₹499</h1>
-            <p>Per Month</p>
+
+            <h3>
+              Free Trial
+            </h3>
+
+            <h1>
+              ₹0
+            </h1>
+
+            <p>
+              1 Day Access
+            </p>
+
+            <ul>
+
+              <li>✓ Dashboard Access</li>
+              <li>✓ Task Management</li>
+              <li>✓ Meetings</li>
+              <li>✓ Documents</li>
+              <li>✓ Basic Analytics</li>
+
+            </ul>
+
+
+
           </div>
+
+          {/* STARTER */}
 
           <div className="price-card featured">
-            <h3>Professional</h3>
-            <h1>₹999</h1>
-            <p>Per Month</p>
+
+            <div className="popular-tag">
+
+              MOST POPULAR
+
+            </div>
+
+            <h3>
+              Starter
+            </h3>
+
+            <h1>
+              ₹499
+            </h1>
+
+            <p>
+              Per Month
+            </p>
+
+            <ul>
+
+              <li>✓ Everything in Free Trial</li>
+              <li>✓ Unlimited Tasks</li>
+              <li>✓ Unlimited Meetings</li>
+              <li>✓ Investor CRM</li>
+              <li>✓ Team Collaboration</li>
+              <li>✓ Email Integration</li>
+              <li>✓ Priority Support</li>
+
+            </ul>
+
+            <button
+              className="price-btn"
+              onClick={() => navigate("/login")}
+            >
+
+              Upgrade to Starter
+
+            </button>
+
           </div>
 
+          {/* ENTERPRISE */}
+
           <div className="price-card">
-            <h3>Enterprise</h3>
-            <h1>Custom</h1>
-            <p>Contact Sales</p>
+
+            <h3>
+              Enterprise
+            </h3>
+
+            <h1>
+              ₹4999
+            </h1>
+
+            <p>
+              Per Year
+            </p>
+
+            <ul>
+
+              <li>✓ Everything in Starter</li>
+              <li>✓ Unlimited Team Members</li>
+              <li>✓ Advanced Analytics</li>
+              <li>✓ Custom Reports</li>
+              <li>✓ API Access</li>
+              <li>✓ Role Permissions</li>
+              <li>✓ Dedicated Account Manager</li>
+              <li>✓ 24/7 Priority Support</li>
+
+            </ul>
+
+            <button
+              className="price-btn"
+              onClick={() => navigate("/login")}
+            >
+              Upgrade to Starter
+            </button>
+
           </div>
 
         </div>
@@ -313,39 +493,157 @@ function Home() {
       {/* CONTACT */}
 
       <section
-        id="contact"
-        className="contact-section"
-      >
+  id="contact"
+  className="contact-section"
+>
 
-        <h2>
-          Contact Us
-        </h2>
+  <div className="contact-form-card">
 
-        <form>
+    <h2>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-          />
+            Send Us A Message
 
-          <input
-            type="email"
-            placeholder="Email Address"
-          />
+          </h2>
 
-          <textarea
-            placeholder="Message"
-          />
+          <form
 
-          <button
-            type="submit"
+            onSubmit={handleSubmit}
+
+            className="contact-form"
+
           >
-            Send Message
-          </button>
 
-        </form>
+            <div className="form-group">
 
-      </section>
+              <label>
+
+                Full Name
+
+              </label>
+
+              <input
+
+                type="text"
+
+                name="name"
+
+                value={formData.name}
+
+                onChange={handleChange}
+
+                placeholder="Enter your name"
+
+                required
+
+              />
+
+            </div>
+
+            <div className="form-group">
+
+              <label>
+
+                Email Address
+
+              </label>
+
+              <input
+
+                type="email"
+
+                name="email"
+
+                value={formData.email}
+
+                onChange={handleChange}
+
+                placeholder="Enter your email"
+
+                required
+
+              />
+
+            </div>
+
+            <div className="form-group">
+
+              <label>
+
+                Subject
+
+              </label>
+
+              <input
+
+                type="text"
+
+                name="subject"
+
+                value={formData.subject}
+
+                onChange={handleChange}
+
+                placeholder="Enter subject"
+
+                required
+
+              />
+
+            </div>
+
+            <div className="form-group">
+
+              <label>
+
+                Message
+
+              </label>
+
+              <textarea
+
+                name="message"
+
+                value={formData.message}
+
+                onChange={handleChange}
+
+                placeholder="Write your message..."
+
+                rows="6"
+
+                required
+
+              />
+
+            </div>
+
+            <button
+
+              type="submit"
+
+              className="submit-btn"
+
+              disabled={sending}
+
+            >
+
+              {
+
+                sending
+
+                ? "Sending..."
+
+                : "Send Message"
+
+              }
+
+            </button>
+
+          </form>
+
+  </div>
+
+</section>
 
       {/* FOOTER */}
 
