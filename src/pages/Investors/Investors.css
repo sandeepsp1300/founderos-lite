@@ -1,0 +1,306 @@
+/* =========================
+   PAGE
+========================= */
+
+.investors-page {
+  padding: 30px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.page-header p {
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 4px 12px
+    rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 4px 12px
+    rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.form-card h2 {
+  margin-bottom: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px,1fr)
+    );
+  gap: 18px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 3px
+    rgba(37,99,235,0.15);
+  outline: none;
+}
+
+.notes-area {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.notes-area:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-card {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 4px 12px
+    rgba(0,0,0,0.05);
+}
+
+.table-card h2 {
+  margin-bottom: 20px;
+}
+
+.investor-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.investor-table th {
+  background: #f8fafc;
+  color: #374151;
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.investor-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.investor-table tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.stage-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stage-lead {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.stage-contacted {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.stage-interested {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stage-invested {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.stage-rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .investor-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

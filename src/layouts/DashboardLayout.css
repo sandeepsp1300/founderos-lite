@@ -1,0 +1,79 @@
+/* =========================================
+   LAYOUT
+========================================= */
+
+.dashboard-layout {
+
+  display: flex;
+
+  min-height: 100vh;
+
+  background: #f8fafc;
+
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.dashboard-main {
+
+  flex: 1;
+
+  padding: 24px;
+
+  overflow-x: auto;
+
+  overflow-y: auto;
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .dashboard-main {
+
+    padding: 20px;
+
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-layout {
+
+    flex-direction: column;
+
+  }
+
+  .dashboard-main {
+
+    width: 100%;
+
+    padding: 15px;
+
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .dashboard-main {
+
+    padding: 12px;
+
+  }
+
+}

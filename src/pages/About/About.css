@@ -1,0 +1,663 @@
+/* ==================================================
+   ABOUT PAGE
+================================================== */
+
+.about-page {
+
+  min-height: 100vh;
+
+  background:
+  linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef2ff 100%
+  );
+
+  color: #111827;
+
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.about-hero {
+
+  background:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+
+  padding: 100px 40px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.about-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+  radial-gradient(
+    circle at top right,
+    rgba(255,255,255,.15),
+    transparent 40%
+  );
+
+}
+
+.hero-content {
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+.about-hero h1 {
+
+  margin: 0;
+
+  font-size: 60px;
+
+  font-weight: 800;
+
+}
+
+.about-hero p {
+
+  max-width: 850px;
+
+  margin: 25px auto 0;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  opacity: .95;
+
+}
+
+/* ==================================================
+   SECTIONS
+================================================== */
+
+.about-section {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 70px 30px;
+
+}
+
+.about-section h2 {
+
+  font-size: 38px;
+
+  margin-bottom: 25px;
+
+  color: #111827;
+
+}
+
+.about-section p {
+
+  color: #475569;
+
+  line-height: 1.9;
+
+  font-size: 17px;
+
+  margin-bottom: 18px;
+
+}
+
+.about-section ul {
+
+  margin-top: 25px;
+
+  padding-left: 25px;
+
+}
+
+.about-section li {
+
+  margin-bottom: 12px;
+
+  color: #334155;
+
+  font-size: 16px;
+
+}
+
+/* ==================================================
+   BENEFITS GRID
+================================================== */
+
+.benefits-grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(260px,1fr)
+  );
+
+  gap: 25px;
+
+  margin-top: 40px;
+
+}
+
+.benefit-card {
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  box-shadow:
+  0 10px 25px
+  rgba(0,0,0,.06);
+
+  transition: .3s;
+
+  border: 1px solid #e5e7eb;
+
+}
+
+.benefit-card:hover {
+
+  transform:
+  translateY(-8px);
+
+  box-shadow:
+  0 20px 40px
+  rgba(0,0,0,.1);
+
+}
+
+.benefit-card h3 {
+
+  margin-top: 0;
+
+  color: #2563eb;
+
+  font-size: 22px;
+
+  margin-bottom: 15px;
+
+}
+
+.benefit-card p {
+
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+}
+
+/* ==================================================
+   FEATURE SECTION
+================================================== */
+
+.feature-section {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 50px 30px;
+
+}
+
+.feature-section h2 {
+
+  font-size: 34px;
+
+  margin-bottom: 15px;
+
+  color: #111827;
+
+}
+
+.feature-section p {
+
+  color: #64748b;
+
+  line-height: 1.9;
+
+  margin-bottom: 25px;
+
+}
+
+.feature-section ul {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(250px,1fr)
+  );
+
+  gap: 15px;
+
+  padding: 0;
+
+  list-style: none;
+
+}
+
+.feature-section li {
+
+  background: white;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+  0 5px 15px
+  rgba(0,0,0,.04);
+
+  font-weight: 500;
+
+  color: #334155;
+
+}
+
+/* ==================================================
+   FEATURE HOVER
+================================================== */
+
+.feature-section li:hover {
+
+  border-color: #2563eb;
+
+  transform:
+  translateY(-3px);
+
+  transition: .25s;
+
+}
+
+/* ==================================================
+   TECH GRID
+================================================== */
+
+.tech-grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(280px,1fr)
+  );
+
+  gap: 25px;
+
+  margin-top: 35px;
+
+}
+
+.tech-card {
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+  0 8px 20px
+  rgba(0,0,0,.05);
+
+  transition: .3s;
+
+}
+
+.tech-card:hover {
+
+  transform:
+  translateY(-6px);
+
+}
+
+.tech-card h3 {
+
+  margin-top: 0;
+
+  color: #7c3aed;
+
+  font-size: 24px;
+
+  margin-bottom: 15px;
+
+}
+
+.tech-card p {
+
+  color: #64748b;
+
+  line-height: 2;
+
+  margin: 0;
+
+}
+
+/* ==================================================
+   FOUNDER SECTION
+================================================== */
+
+.founder-section {
+
+  max-width: 1200px;
+
+  margin: 60px auto;
+
+  padding: 50px;
+
+  border-radius: 30px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffffff,
+    #f8fafc
+  );
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+  0 15px 35px
+  rgba(0,0,0,.08);
+
+}
+
+.founder-section h2 {
+
+  margin-top: 0;
+
+  font-size: 38px;
+
+  color: #111827;
+
+  margin-bottom: 25px;
+
+}
+
+.founder-section p {
+
+  color: #475569;
+
+  line-height: 2;
+
+  font-size: 17px;
+
+  margin-bottom: 20px;
+
+}
+
+/* ==================================================
+   ABOUT FOOTER
+================================================== */
+
+.about-footer {
+
+  margin-top: 80px;
+
+  padding: 80px 40px;
+
+  text-align: center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #111827,
+    #1e293b
+  );
+
+  color: white;
+
+}
+
+.about-footer h2 {
+
+  margin: 0;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+}
+
+.about-footer p {
+
+  max-width: 900px;
+
+  margin: 20px auto;
+
+  line-height: 2;
+
+  opacity: .9;
+
+  font-size: 18px;
+
+}
+
+/* ==================================================
+   PREMIUM CARD EFFECT
+================================================== */
+
+.benefit-card,
+.tech-card,
+.feature-section li {
+
+  backdrop-filter:
+  blur(10px);
+
+}
+
+.benefit-card:hover,
+.tech-card:hover {
+
+  border-color: #2563eb;
+
+}
+
+/* ==================================================
+   SCROLL ANIMATION EFFECT
+================================================== */
+
+.about-section,
+.feature-section,
+.founder-section {
+
+  animation:
+  fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+    translateY(30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+    translateY(0);
+
+  }
+
+}
+
+/* ==================================================
+   RESPONSIVE TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+
+  .about-hero h1 {
+
+    font-size: 48px;
+
+  }
+
+  .about-hero p {
+
+    font-size: 18px;
+
+  }
+
+  .about-section h2,
+  .feature-section h2,
+  .founder-section h2 {
+
+    font-size: 32px;
+
+  }
+
+}
+
+/* ==================================================
+   RESPONSIVE MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .about-hero {
+
+    padding: 70px 20px;
+
+  }
+
+  .about-hero h1 {
+
+    font-size: 38px;
+
+  }
+
+  .about-hero p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+  }
+
+  .about-section,
+  .feature-section {
+
+    padding: 40px 20px;
+
+  }
+
+  .founder-section {
+
+    padding: 30px 20px;
+
+    margin: 30px 15px;
+
+  }
+
+  .benefits-grid,
+  .tech-grid {
+
+    grid-template-columns:
+    1fr;
+
+  }
+
+  .feature-section ul {
+
+    grid-template-columns:
+    1fr;
+
+  }
+
+  .about-footer {
+
+    padding: 60px 20px;
+
+  }
+
+  .about-footer h2 {
+
+    font-size: 34px;
+
+  }
+
+  .about-footer p {
+
+    font-size: 16px;
+
+  }
+
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+  .about-hero h1 {
+
+    font-size: 30px;
+
+  }
+
+  .about-section h2,
+  .feature-section h2,
+  .founder-section h2 {
+
+    font-size: 26px;
+
+  }
+
+  .benefit-card,
+  .tech-card {
+
+    padding: 20px;
+
+  }
+
+}

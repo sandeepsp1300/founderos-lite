@@ -1,0 +1,193 @@
+
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url(
+'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+);
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+/* =========================================
+   ROOT
+========================================= */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  font-family: 'Inter',
+    sans-serif;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  overflow-x: hidden;
+
+}
+
+/* =========================================
+   APP ROOT
+========================================= */
+
+#root {
+
+  min-height: 100vh;
+
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-weight: 700;
+
+  color: #111827;
+
+}
+
+p {
+
+  color: #6b7280;
+
+  line-height: 1.6;
+
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+}
+
+/* =========================================
+   FORMS
+========================================= */
+
+input,
+select,
+textarea,
+button {
+
+  font-family: inherit;
+
+}
+
+input,
+select,
+textarea {
+
+  width: 100%;
+
+}
+
+textarea {
+
+  resize: vertical;
+
+}
+
+/* =========================================
+   IMAGES
+========================================= */
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+
+}
+
+/* =========================================
+   TABLES
+========================================= */
+
+table {
+
+  width: 100%;
+
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+  height: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #94a3b8;
+
+  border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: #f1f5f9;
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  body {
+
+    overflow-x: hidden;
+
+  }
+
+}
