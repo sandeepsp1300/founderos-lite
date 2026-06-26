@@ -42,12 +42,11 @@ const payload = {
 
 };
 
-const { data, error } =
-  await supabase
-    .from("profiles")
-    .upsert(payload)
-    .select()
-    .single();
+const { data, error } = await supabase
+  .from("profiles")
+  .upsert(payload)
+  .select()
+  .maybeSingle();
 
 return {
   data,
@@ -66,21 +65,15 @@ profile
 ) => {
 
 
-const { data, error } =
-  await supabase
-    .from("profiles")
-    .update({
-
-      ...profile,
-
-      updated_at:
-        new Date()
-          .toISOString(),
-
-    })
-    .eq("id", userId)
-    .select()
-    .single();
+const { data, error } = await supabase
+  .from("profiles")
+  .update({
+    ...profile,
+    updated_at: new Date().toISOString(),
+  })
+  .eq("id", userId)
+  .select()
+  .maybeSingle();
 
 return {
   data,
